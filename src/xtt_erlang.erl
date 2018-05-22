@@ -79,7 +79,7 @@ priv_dir() ->
 
 
 %%====================================================================
-%% NIFs
+%% Client handshake NIFs
 %%====================================================================
 
 xtt_init_client_group_context(_Gid, _PrivKey, _Credential, _Basename)->
@@ -132,6 +132,12 @@ xtt_x509_from_keypair(_LongtermKey, _LongtermPrivKey, _Identity)->
 
 xtt_asn1_from_private_key(_LongtermPrivKey)->
   erlang:nif_error(?LINE).
+
+
+%%====================================================================
+%% Server NIFs
+%%====================================================================
+
 
 %%====================================================================
 %% Internal functions
